@@ -11,7 +11,7 @@ import socket
 import time
 
 PACKET = bytes("12345", encoding="utf-8")    #use bytes or encode with "bytes(string, encoding)"
-TIME = 1     #s
+TIME = 2     #s
 
 IP = "192.168.137.255"
 PORT = 8090
