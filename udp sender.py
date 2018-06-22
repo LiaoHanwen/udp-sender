@@ -10,7 +10,8 @@
 import socket
 import time
 
-PACKET = bytes("12345", encoding="utf-8")    #use bytes or encode with "bytes(string, encoding)"
+# use bytes or encode with "bytes(string, encoding)"
+PACKET = bytes("12345", encoding="utf-8")
 
 ########################  EXAMPLE ##############################
 # BYTES = b'\x12\x34\x56\x78\x90\xab\xcd\xef'
@@ -18,16 +19,16 @@ PACKET = bytes("12345", encoding="utf-8")    #use bytes or encode with "bytes(st
 # BYTES = bytes(str(NUM), encoding="utf-8") #convert num to bytes
 ################################################################
 
-TIME = 1     #s
+TIME = 1  # s
 
 IP = "192.168.137.255"
 PORT = 8090
 
-client=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  #create udp socket
-counter = 0     #counter for dispatch
+client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # create udp socket
+counter = 0  # counter for dispatch
 
 while(True):
     counter += 1
-    client.sendto(PACKET, (IP,PORT))   #send message
+    client.sendto(PACKET, (IP, PORT))  # send message
     print("counter:" + str(counter))
     time.sleep(TIME)
